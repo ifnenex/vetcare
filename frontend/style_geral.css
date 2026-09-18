@@ -1,0 +1,494 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7f7;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+main {
+    width: 850px;
+    height: 520px;
+
+    background-color: white;
+
+    display: flex;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+
+main > section:first-child {
+    width: 48%;
+
+    background-color: #139c99;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: white;
+
+    padding-top: 55px;
+
+    overflow: hidden;
+}
+
+
+
+main > section:first-child > div:first-child {
+    width: 65px;
+    height: 65px;
+
+    background-color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+
+
+main > section:first-child h1 {
+    font-size: 23px;
+    font-weight: 500;
+
+    margin-bottom: 8px;
+}
+
+main > section:first-child p {
+    font-size: 11px;
+    opacity: 0.9;
+}
+
+
+
+main > section:first-child > div:last-child {
+    position: absolute;
+
+    bottom: -5px;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+
+main > section:first-child > div:last-child img {
+    object-fit: contain;
+    display: block;
+}
+
+
+
+main > section:first-child > div:last-child img:first-child {
+    width: 185px;
+    max-height: 220px;
+}
+
+
+
+main > section:first-child > div:last-child img:last-child {
+    width: 175px;
+    max-height: 210px;
+
+    margin-left: -20px;
+}
+
+
+
+main > section:last-child {
+    width: 52%;
+
+    padding: 55px 65px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+}
+
+
+
+#telaLogin,
+#telaCadastro {
+    width: 100%;
+}
+
+
+
+main > section:last-child h2 {
+    font-size: 20px;
+
+    color: #292929;
+
+    margin-bottom: 6px;
+}
+
+
+
+main > section:last-child > div > p.subtitulo {
+    color: #999;
+
+    font-size: 11px;
+
+    margin-bottom: 25px;
+}
+
+
+
+form {
+    width: 100%;
+}
+
+
+
+.campo {
+    margin-bottom: 15px;
+}
+
+
+
+.campo label {
+    display: block;
+
+    font-size: 10px;
+
+    color: #444;
+
+    margin-bottom: 6px;
+}
+
+
+
+.input-container {
+    height: 38px;
+
+    border: 1px solid #e2e2e2;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 10px;
+
+    transition: 0.2s;
+}
+
+
+
+.input-container:focus-within {
+    border-color: #139c99;
+}
+
+
+
+.icone {
+    color: #999;
+
+    margin-right: 9px;
+
+    font-size: 14px;
+}
+
+
+
+.input-container input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 11px;
+
+    color: #333;
+}
+
+
+
+.input-container input::placeholder {
+    color: #aaa;
+}
+
+
+
+.senha-container button {
+    background: none;
+
+    border: none;
+
+    cursor: pointer;
+
+    color: #999;
+
+    font-size: 13px;
+}
+
+
+
+
+#telaCadastro .campo {
+    margin-bottom: 16px;
+}
+
+
+#telaCadastro .campo label {
+    font-size: 11px;
+
+    margin-bottom: 7px;
+}
+
+
+#telaCadastro .input-container {
+    height: 48px;
+
+    padding: 0 12px;
+
+    border-radius: 6px;
+}
+
+
+#telaCadastro .input-container input {
+    font-size: 14px;
+}
+
+
+#telaCadastro .input-container input::placeholder {
+    font-size: 13px;
+}
+
+
+#telaCadastro .icone {
+    font-size: 16px;
+
+    margin-right: 10px;
+}
+
+
+#telaCadastro .senha-container button {
+    font-size: 15px;
+}
+
+
+
+#telaCadastro .btn-entrar {
+    height: 43px;
+
+    font-size: 12px;
+
+    margin-top: 3px;
+}
+
+
+
+.esqueci {
+    display: block;
+
+    text-align: right;
+
+    margin-top: -7px;
+
+    margin-bottom: 17px;
+
+    color: #159b97;
+
+    font-size: 9px;
+
+    text-decoration: none;
+}
+
+.esqueci:hover {
+    text-decoration: underline;
+}
+
+
+
+.btn-entrar {
+    width: 100%;
+
+    height: 38px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #139c99;
+
+    color: white;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-entrar:hover {
+    background-color: #0d8784;
+}
+
+
+ 
+
+.divisor {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 17px 0;
+}
+
+
+.divisor span {
+    height: 1px;
+
+    background-color: #eeeeee;
+
+    flex: 1;
+}
+
+
+.divisor p {
+    font-size: 9px;
+
+    color: #999;
+}
+
+
+
+.btn-google {
+    height: 38px;
+
+    width: 100%;
+
+    background-color: white;
+
+    border: 1px solid #e1e1e1;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 9px;
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+    color: #444;
+
+    transition: 0.2s;
+}
+
+.btn-google:hover {
+    background-color: #fafafa;
+}
+
+
+
+.google {
+    font-weight: bold;
+
+    font-size: 15px;
+
+    color: #4285f4;
+}
+
+
+/* CADASTRO */
+
+.cadastro {
+    text-align: center;
+
+    margin-top: 17px;
+
+    font-size: 9px;
+
+    color: #999;
+}
+
+
+.cadastro a {
+    color: #139c99;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.cadastro a:hover {
+    text-decoration: underline;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 750px) {
+
+    main {
+        width: 90%;
+        height: auto;
+    }
+
+    main > section:first-child {
+        display: none;
+    }
+
+    main > section:last-child {
+        width: 100%;
+
+        padding: 45px;
+
+        max-height: 90vh;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    main {
+        width: 94%;
+    }
+
+    main > section:last-child {
+        padding: 35px 25px;
+    }
+}

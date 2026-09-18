@@ -1,0 +1,876 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f5f7f7;
+
+    min-height: 100vh;
+
+    color: #333;
+}
+
+
+/* =========================================================
+   CONTAINER PRINCIPAL
+========================================================= */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+}
+
+
+/* =========================================================
+   MENU LATERAL
+========================================================= */
+
+.menu {
+    width: 220px;
+
+    min-height: 100vh;
+
+    background-color: white;
+
+    border-right: 1px solid #eeeeee;
+
+    padding: 25px 18px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 0 8px;
+
+    margin-bottom: 35px;
+}
+
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background-color: #e8f7f6;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+}
+
+
+.logo strong {
+    display: block;
+
+    color: #139c99;
+
+    font-size: 12px;
+}
+
+
+.logo span {
+    display: block;
+
+    color: #139c99;
+
+    font-size: 10px;
+
+    margin-top: 2px;
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO
+========================================================= */
+
+.menu nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.menu nav a {
+    width: 100%;
+
+    height: 36px;
+
+    padding: 0 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    color: #777;
+
+    font-size: 10px;
+
+    border-radius: 5px;
+
+    transition: 0.2s;
+}
+
+
+.menu nav a span {
+    white-space: nowrap;
+}
+
+
+.menu nav a:hover {
+    background-color: #f1fafa;
+
+    color: #139c99;
+}
+
+
+/* ITEM ATIVO */
+
+.menu nav a.ativo {
+    background-color: #e6f6f5;
+
+    color: #139c99;
+
+    font-weight: bold;
+}
+
+
+.menu nav a:first-child {
+    color: #777;
+}
+
+
+.menu nav a:first-child:hover {
+    color: #139c99;
+}
+
+
+/* =========================================================
+   ÁREA DE AJUDA / WHATSAPP
+========================================================= */
+
+.ajuda {
+    margin-top: auto;
+
+    background-color: #e7f7f6;
+
+    border-radius: 6px;
+
+    padding: 14px 12px;
+
+    text-align: left;
+}
+
+
+.ajuda strong {
+    display: block;
+
+    color: #333;
+
+    font-size: 11px;
+
+    margin-bottom: 4px;
+}
+
+
+.ajuda p {
+    color: #777;
+
+    font-size: 9px;
+
+    margin-bottom: 11px;
+}
+
+
+.ajuda button {
+    width: 100%;
+
+    height: 30px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background-color: #139c99;
+
+    color: white;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.ajuda button:hover {
+    background-color: #0d8784;
+}
+
+
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+========================================================= */
+
+main {
+    flex: 1;
+
+    padding: 30px 42px;
+
+    background-color: #ffffff;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+header {
+    margin-bottom: 25px;
+}
+
+
+header h1 {
+    font-size: 21px;
+
+    color: #292929;
+
+    font-weight: 600;
+
+    margin-bottom: 6px;
+}
+
+
+header p {
+    font-size: 9px;
+
+    color: #999;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+========================================================= */
+
+#formPet {
+    width: 100%;
+}
+
+
+/* =========================================================
+   TÍTULOS DAS SEÇÕES
+========================================================= */
+
+#formPet h2 {
+    font-size: 11px;
+
+    color: #444;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   TOPO DO FORMULÁRIO
+========================================================= */
+
+.topo-formulario {
+    width: 100%;
+
+    display: flex;
+
+    gap: 25px;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   FOTO DO PET
+========================================================= */
+
+.foto-pet {
+    width: 145px;
+
+    flex-shrink: 0;
+}
+
+
+.area-foto {
+    width: 145px;
+    height: 145px;
+
+    border: 1px solid #e4e4e4;
+
+    border-radius: 5px;
+
+    background-color: #fff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.area-foto:hover {
+    border-color: #139c99;
+
+    background-color: #fbffff;
+}
+
+
+.camera {
+    font-size: 20px;
+
+    color: #999;
+
+    margin-bottom: 8px;
+}
+
+
+.area-foto strong {
+    font-size: 9px;
+
+    color: #555;
+
+    margin-bottom: 4px;
+}
+
+
+.area-foto small {
+    font-size: 7px;
+
+    color: #aaa;
+}
+
+
+/* INPUT DE FOTO */
+
+.area-foto input[type="file"] {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   INFORMAÇÕES BÁSICAS
+========================================================= */
+
+.informacoes {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   CAMPOS
+========================================================= */
+
+.campo {
+    margin-bottom: 13px;
+}
+
+
+.campo label {
+    display: block;
+
+    color: #555;
+
+    font-size: 9px;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   INPUTS E SELECT
+========================================================= */
+
+.campo input,
+.campo select {
+    width: 100%;
+
+    height: 34px;
+
+    border: 1px solid #e3e3e3;
+
+    border-radius: 4px;
+
+    outline: none;
+
+    background-color: white;
+
+    color: #444;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 9px;
+
+    padding: 0 10px;
+
+    transition: 0.2s;
+}
+
+
+.campo input::placeholder {
+    color: #aaa;
+}
+
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #139c99;
+
+    box-shadow: 0 0 0 2px rgba(19, 156, 153, 0.08);
+}
+
+
+/* =========================================================
+   LINHAS COM MAIS DE UM CAMPO
+========================================================= */
+
+.linha {
+    display: flex;
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+
+.linha .campo {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   ESPÉCIE + RAÇA
+========================================================= */
+
+.informacoes .linha .campo:first-child {
+    flex: 0.8;
+}
+
+
+.informacoes .linha .campo:last-child {
+    flex: 1.2;
+}
+
+
+/* =========================================================
+   RADIO - SEXO
+========================================================= */
+
+.radio-group {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    height: 28px;
+}
+
+
+.radio-group label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin: 0;
+
+    font-size: 9px;
+
+    color: #555;
+
+    cursor: pointer;
+}
+
+
+.radio-group input[type="radio"] {
+    width: 12px;
+    height: 12px;
+
+    margin: 0;
+
+    accent-color: #139c99;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   INFORMAÇÕES ADICIONAIS
+========================================================= */
+
+.informacoes-adicionais {
+    width: 100%;
+
+    margin-top: 5px;
+}
+
+
+.informacoes-adicionais .linha {
+    display: flex;
+
+    gap: 12px;
+}
+
+
+.informacoes-adicionais .linha .campo {
+    flex: 1;
+}
+
+
+/* =========================================================
+   DATA
+========================================================= */
+
+input[type="date"] {
+    color: #777;
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.campo textarea {
+    width: 100%;
+
+    min-height: 70px;
+
+    resize: vertical;
+
+    border: 1px solid #e3e3e3;
+
+    border-radius: 4px;
+
+    outline: none;
+
+    padding: 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 9px;
+
+    color: #444;
+
+    transition: 0.2s;
+}
+
+
+.campo textarea::placeholder {
+    color: #aaa;
+}
+
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+
+.botoes {
+    display: flex;
+
+    gap: 10px;
+
+    width: 100%;
+
+    margin-top: 15px;
+}
+
+
+.botoes button {
+    height: 36px;
+
+    border-radius: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* =========================================================
+   BOTÃO CANCELAR
+========================================================= */
+
+.btn-cancelar {
+    flex: 0.35;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+
+    color: #555;
+}
+
+
+.btn-cancelar:hover {
+    background-color: #f7f7f7;
+}
+
+
+/* =========================================================
+   BOTÃO SALVAR
+========================================================= */
+
+.btn-salvar {
+    flex: 1;
+
+    background-color: #139c99;
+
+    border: 1px solid #139c99;
+
+    color: white;
+
+    font-weight: 500;
+}
+
+
+.btn-salvar:hover {
+    background-color: #0d8784;
+
+    border-color: #0d8784;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .menu {
+        width: 190px;
+
+        padding: 20px 12px;
+    }
+
+    main {
+        padding: 25px;
+    }
+
+    .topo-formulario {
+        gap: 18px;
+    }
+
+    .foto-pet,
+    .area-foto {
+        width: 130px;
+    }
+
+    .area-foto {
+        height: 130px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .menu {
+        width: 170px;
+    }
+
+    .menu nav a {
+        font-size: 9px;
+
+        gap: 8px;
+    }
+
+    main {
+        padding: 22px;
+    }
+
+    .topo-formulario {
+        flex-direction: column;
+    }
+
+    .foto-pet {
+        width: 100%;
+    }
+
+    .area-foto {
+        width: 150px;
+        height: 130px;
+    }
+}
+
+
+/* celular*/
+
+@media (max-width: 550px) {
+
+    .container {
+        display: block;
+    }
+
+
+    .menu {
+        width: 100%;
+
+        min-height: auto;
+
+        border-right: none;
+
+        border-bottom: 1px solid #eeeeee;
+
+        padding: 15px;
+    }
+
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+
+    .menu nav {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 4px;
+    }
+
+
+    .menu nav a {
+        height: 32px;
+    }
+
+
+    .ajuda {
+        display: none;
+    }
+
+
+    main {
+        width: 100%;
+
+        padding: 22px 18px;
+    }
+
+
+    header h1 {
+        font-size: 19px;
+    }
+
+
+    .linha {
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+
+    .informacoes .linha .campo:first-child,
+    .informacoes .linha .campo:last-child {
+        flex: 1;
+    }
+
+
+    .botoes {
+        flex-direction: column;
+    }
+
+
+    .btn-cancelar,
+    .btn-salvar {
+        width: 100%;
+
+        flex: none;
+    }
+}
+
+/*celula menor */
+
+@media (max-width: 380px) {
+
+    main {
+        padding: 18px 14px;
+    }
+
+
+    .menu nav {
+        grid-template-columns: 1fr;
+    }
+
+
+    .area-foto {
+        width: 100%;
+
+        height: 140px;
+    }
+}

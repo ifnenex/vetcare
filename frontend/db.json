@@ -1,0 +1,22 @@
+{
+  "usuarios": [
+    {
+      "nome": "ines",
+      "email": "ines@gmail.com",
+      "senha": "123456",
+      "id": "iO3Y95dFaTg"
+    },
+    {
+      "nome": "luiz",
+      "email": "nego@gmail.com",
+      "senha": "141414",
+      "id": "ffuYAIV6pGA"
+    }
+  ],
+  "pets": [],
+  "consultas": [],
+  "servicos": [],
+  "lembretes": [],
+  "pagamentos": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}

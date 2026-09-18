@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Clínica Veterinária - Início</title>
+
+    <link
+        rel="stylesheet"
+        href="style-inicio.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main>
+
+
+        
+
+        <aside>
+
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <div class="logo-icone">
+                    🐾
+                </div>
+
+                <div>
+
+                    <strong>Clínica</strong>
+
+                    <strong>Veterinária</strong>
+
+                </div>
+
+            </div>
+
+
+
+            <nav>
+
+
+                <!-- INÍCIO -->
+
+                <a
+                    href="inicio.html"
+                    class="ativo"
+                >
+
+                    🏠
+
+                    <span>
+                        Início
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="cadastro-pet.html"
+                >
+
+                    🐕
+
+                    <span>
+                        Meus Pets
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="agendar-consulta.html"
+                >
+
+                    📅
+
+                    <span>
+                        Agendamentos
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="#"
+                    onclick="historicoConsultas(); return false;"
+                >
+
+                    📋
+
+                    <span>
+                        Histórico de Consultas
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="#"
+                    onclick="servicosClinica(); return false;"
+                >
+
+                    🩺
+
+                    <span>
+                        Serviços
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="#"
+                    onclick="verLembretes(); return false;"
+                >
+
+                    🔔
+
+                    <span>
+                        Lembretes
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="#"
+                    onclick="alert('Abrindo área financeira.'); return false;"
+                >
+
+                    💳
+
+                    <span>
+                        Financeiro
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="#"
+                    onclick="alert('Abrindo configurações.'); return false;"
+                >
+
+                    ⚙️
+
+                    <span>
+                        Configurações
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+
+            <div class="card-menu">
+
+                <div class="imagem-pet">
+                    🐶
+                </div>
+
+
+                <p>
+
+                    Mantenha seu pet
+                    sempre saudável!
+
+                </p>
+
+
+                <button
+                    type="button"
+                    onclick="window.location.href='agendar-consulta.html';"
+                >
+
+                    Agendar consulta
+
+                </button>
+
+            </div>
+
+
+
+            <a
+                href="#"
+                class="botao-sair"
+                onclick="sair(); return false;"
+            >
+
+                🚪
+
+                <span>
+                    Sair
+                </span>
+
+            </a>
+
+        </aside>
+
+
+
+        <section class="conteudo">
+
+
+         
+
+            <header>
+
+
+                <div>
+
+                    <h1>
+                        Olá! 👋
+                    </h1>
+
+
+                    <p>
+                        Como podemos ajudar seu pet hoje?
+                    </p>
+
+                </div>
+
+
+
+                <div class="usuario">
+
+
+                    <span
+                        class="notificacao"
+                        onclick="verLembretes();"
+                        title="Lembretes"
+                    >
+
+                        🔔
+
+                    </span>
+
+
+                    <div class="foto-usuario">
+                        👤
+                    </div>
+
+
+                    <span
+                        id="nomeUsuario"
+                    >
+
+                        Usuário
+
+                    </span>
+
+
+                    <span>
+                        ⌄
+                    </span>
+
+                </div>
+
+            </header>
+
+
+            
+
+            <section class="atalhos">
+
+
+
+                <a
+                    href="agendar-consulta.html"
+                    class="atalho consulta"
+                >
+
+                    <div class="icone">
+                        📅
+                    </div>
+
+
+                    <h3>
+                        Agendar
+                    </h3>
+
+
+                    <span>
+                        Consulta
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="cadastro-pet.html"
+                    class="atalho pets"
+                >
+
+                    <div class="icone">
+                        🐾
+                    </div>
+
+
+                    <h3>
+                        Meus
+                    </h3>
+
+
+                    <span>
+                        Pets
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="#"
+                    class="atalho historico"
+                    onclick="historicoConsultas(); return false;"
+                >
+
+                    <div class="icone">
+                        📋
+                    </div>
+
+
+                    <h3>
+                        Histórico de
+                    </h3>
+
+
+                    <span>
+                        Consultas
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    href="#"
+                    class="atalho servicos"
+                    onclick="servicosClinica(); return false;"
+                >
+
+                    <div class="icone">
+                        🩺
+                    </div>
+
+
+                    <h3>
+                        Serviços
+                    </h3>
+
+
+                    <span>
+                        da Clínica
+                    </span>
+
+                </a>
+
+            </section>
+
+
+
+            <section class="area-inferior">
+
+
+                <!-- AGENDAMENTOS -->
+
+                <div class="agendamentos">
+
+
+                    <div class="titulo-secao">
+
+                        <h2>
+                            Próximos agendamentos
+                        </h2>
+
+                    </div>
+
+
+                    <div class="agendamento">
+
+
+                        <div class="pet-foto">
+                            🐶
+                        </div>
+
+
+                        <div class="informacoes">
+
+
+                            <strong>
+                                Rex
+                            </strong>
+
+
+                            <span>
+                                Consulta - Dr. João Silva
+                            </span>
+
+
+                            <small>
+                                📅 20/09/2026 • 10:00
+                            </small>
+
+                        </div>
+
+
+                        <span class="status">
+                            Confirmado
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="lembretes">
+
+
+                    <div class="titulo-secao">
+
+                        <h2>
+                            Lembretes
+                        </h2>
+
+
+                        <a
+                            href="#"
+                            onclick="verLembretes(); return false;"
+                        >
+
+                            Ver todos
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="lembrete">
+
+
+                        <span class="icone-lembrete">
+                            💊
+                        </span>
+
+
+                        <div>
+
+                            <strong>
+                                Vacina V10 - Rex
+                            </strong>
+
+
+                            <small>
+                                Vence em 05/10/2026
+                            </small>
+
+                        </div>
+
+
+                        <span>
+                            ▣
+                        </span>
+
+                    </div>
+
+
+                    <div class="lembrete">
+
+
+                        <span class="icone-lembrete">
+                            💊
+                        </span>
+
+
+                        <div>
+
+                            <strong>
+                                Antipulgas - Mel
+                            </strong>
+
+
+                            <small>
+                                Vence em 15/10/2026
+                            </small>
+
+                        </div>
+
+
+                        <span>
+                            ▣
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <section class="dicas">
+
+
+                <div class="dica-imagem">
+                    🐕
+                </div>
+
+
+                <div class="dica-texto">
+
+
+                    <h2>
+                        Dicas para o seu pet
+                    </h2>
+
+
+                    <p>
+                        Mantenha a vacinação e os cuidados
+                        do seu pet sempre em dia.
+                    </p>
+
+
+                    <button
+                        type="button"
+                        onclick="dicasPet();"
+                    >
+
+                        Saiba mais
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+
+    <script src="script_geral.js"></script>
+
+</body>
+
+</html>
+```

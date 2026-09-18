@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agendar Consulta - Clínica Veterinária</title>
+
+    <link rel="stylesheet" href="style-agendamento.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+      
+        <aside class="menu">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    🐾
+                </div>
+
+                <div>
+                    <strong>Clínica</strong>
+                    <span>Veterinária</span>
+                </div>
+
+            </div>
+
+            <nav>
+
+                <a href="inicio.html">
+                    🏠
+                    <span>Início</span>
+                </a>
+
+                <a href="cadastro-pet.html">
+                    🐾
+                    <span>Meus Pets</span>
+                </a>
+
+                <a href="agendar-consulta.html" class="ativo">
+                    📅
+                    <span>Agendamentos</span>
+                </a>
+
+                <a href="#">
+                    📋
+                    <span>Histórico de Consultas</span>
+                </a>
+
+                <a href="#">
+                    💼
+                    <span>Serviços</span>
+                </a>
+
+                <a href="#">
+                    🔔
+                    <span>Lembretes</span>
+                </a>
+
+                <a href="#">
+                    💳
+                    <span>Financeiro</span>
+                </a>
+
+                <a href="#">
+                    ⚙️
+                    <span>Configurações</span>
+                </a>
+
+            </nav>
+
+
+            <div class="ajuda">
+
+                <strong>Precisa de ajuda?</strong>
+
+                <p>
+                    Fale com nossa equipe
+                </p>
+
+                <button type="button">
+                    ☎ Contato da Clínica
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <main>
+
+
+            <header>
+
+                <h1>Agendar Consulta</h1>
+
+                <p>
+                    Agendamentos &nbsp;›&nbsp; Agendar Consulta
+                </p>
+
+            </header>
+
+
+
+            <div class="etapas">
+
+                <div class="etapa ativa">
+
+                    <div class="numero">
+                        1
+                    </div>
+
+                    <span>Pet</span>
+
+                </div>
+
+
+                <div class="linha-etapa"></div>
+
+
+                <div class="etapa">
+
+                    <div class="numero">
+                        2
+                    </div>
+
+                    <span>Serviço</span>
+
+                </div>
+
+
+                <div class="linha-etapa"></div>
+
+
+                <div class="etapa">
+
+                    <div class="numero">
+                        3
+                    </div>
+
+                    <span>Veterinário</span>
+
+                </div>
+
+
+                <div class="linha-etapa"></div>
+
+
+                <div class="etapa">
+
+                    <div class="numero">
+                        4
+                    </div>
+
+                    <span>Data e Horário</span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="area-agendamento">
+
+
+                <section class="card-agendamento">
+
+                    <h2>
+                        1. Selecione o Pet
+                    </h2>
+
+
+                    <div class="lista-pets">
+
+
+
+                        <label class="pet-card selecionado">
+
+                            <input
+                                type="radio"
+                                name="pet"
+                                value="Rex"
+                                checked
+                            >
+
+                            <div class="foto-pet">
+                                🐶
+                            </div>
+
+                            <div class="dados-pet">
+
+                                <strong>Rex</strong>
+
+                                <span>
+                                    Pastor Alemão
+                                </span>
+
+                            </div>
+
+                            <div class="check-pet">
+                                ✓
+                            </div>
+
+                        </label>
+
+
+
+                        <label class="pet-card">
+
+                            <input
+                                type="radio"
+                                name="pet"
+                                value="Mel"
+                            >
+
+                            <div class="foto-pet">
+                                🐕
+                            </div>
+
+                            <div class="dados-pet">
+
+                                <strong>Mel</strong>
+
+                                <span>
+                                    Shih Tzu
+                                </span>
+
+                            </div>
+
+                            <div class="check-pet">
+                                ○
+                            </div>
+
+                        </label>
+
+
+
+                        <label class="pet-card">
+
+                            <input
+                                type="radio"
+                                name="pet"
+                                value="Thor"
+                            >
+
+                            <div class="foto-pet">
+                                🐶
+                            </div>
+
+                            <div class="dados-pet">
+
+                                <strong>Thor</strong>
+
+                                <span>
+                                    Yorkshire
+                                </span>
+
+                            </div>
+
+                            <div class="check-pet">
+                                ○
+                            </div>
+
+                        </label>
+
+
+
+                        <button
+                            type="button"
+                            class="adicionar-pet"
+                            onclick="window.location.href='cadastro-pet.html'"
+                        >
+                            ＋ Adicionar novo pet
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <section class="card-agendamento">
+
+                    <h2>
+                        2. Selecione o Serviço
+                    </h2>
+
+
+                    <div class="lista-servicos">
+
+
+
+                        <label class="servico-card selecionado">
+
+                            <input
+                                type="radio"
+                                name="servico"
+                                value="Consulta Clínica"
+                                checked
+                            >
+
+                            <div class="icone-servico">
+                                🩺
+                            </div>
+
+                            <div class="dados-servico">
+
+                                <strong>
+                                    Consulta Clínica
+                                </strong>
+
+                                <span>
+                                    Atendimento geral
+                                </span>
+
+                            </div>
+
+                            <strong class="preco">
+                                R$ 80,00
+                            </strong>
+
+                        </label>
+
+
+
+                        <label class="servico-card">
+
+                            <input
+                                type="radio"
+                                name="servico"
+                                value="Vacinação"
+                            >
+
+                            <div class="icone-servico">
+                                💉
+                            </div>
+
+                            <div class="dados-servico">
+
+                                <strong>
+                                    Vacinação
+                                </strong>
+
+                                <span>
+                                    Aplicação de vacina
+                                </span>
+
+                            </div>
+
+                            <strong class="preco">
+                                R$ 60,00
+                            </strong>
+
+                        </label>
+
+
+
+                        <label class="servico-card">
+
+                            <input
+                                type="radio"
+                                name="servico"
+                                value="Retorno"
+                            >
+
+                            <div class="icone-servico">
+                                🔄
+                            </div>
+
+                            <div class="dados-servico">
+
+                                <strong>
+                                    Retorno
+                                </strong>
+
+                                <span>
+                                    Consulta de retorno
+                                </span>
+
+                            </div>
+
+                            <strong class="preco">
+                                R$ 50,00
+                            </strong>
+
+                        </label>
+
+
+
+                        <label class="servico-card">
+
+                            <input
+                                type="radio"
+                                name="servico"
+                                value="Exame"
+                            >
+
+                            <div class="icone-servico">
+                                🧪
+                            </div>
+
+                            <div class="dados-servico">
+
+                                <strong>
+                                    Exame
+                                </strong>
+
+                                <span>
+                                    Exames laboratoriais
+                                </span>
+
+                            </div>
+
+                            <strong class="preco">
+                                R$ 100,00
+                            </strong>
+
+                        </label>
+
+                    </div>
+
+                </section>
+
+
+                
+
+                <section class="card-agendamento direita">
+
+
+
+                    <div class="campo-agendamento">
+
+                        <h2>
+                            3. Escolha o Veterinário
+                        </h2>
+
+                        <select id="veterinario">
+
+                            <option value="dr-joao">
+                                Dr. João Silva
+                            </option>
+
+                            <option value="dra-ana">
+                                Dra. Ana Souza
+                            </option>
+
+                            <option value="dr-carlos">
+                                Dr. Carlos Oliveira
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="campo-agendamento">
+
+                        <h2>
+                            4. Escolha a Data e Horário
+                        </h2>
+
+
+                        <label for="data">
+                            Data
+                        </label>
+
+                        <input
+                            type="date"
+                            id="data"
+                            name="data"
+                        >
+
+
+                        <label>
+                            Horários disponíveis
+                        </label>
+
+
+                        <div class="horarios">
+
+
+                            <button
+                                type="button"
+                                class="horario"
+                            >
+                                08:00
+                            </button>
+
+                            <button
+                                type="button"
+                                class="horario"
+                            >
+                                09:00
+                            </button>
+
+                            <button
+                                type="button"
+                                class="horario selecionado"
+                            >
+                                10:00
+                            </button>
+
+                            <button
+                                type="button"
+                                class="horario"
+                            >
+                                11:00
+                            </button>
+
+                            <button
+                                type="button"
+                                class="horario"
+                            >
+                                14:00
+                            </button>
+
+                            <button
+                                type="button"
+                                class="horario"
+                            >
+                                15:00
+                            </button>
+
+                            <button
+                                type="button"
+                                class="horario"
+                            >
+                                16:00
+                            </button>
+
+                            <button
+                                type="button"
+                                class="horario"
+                            >
+                                17:00
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <button
+                        type="button"
+                        class="btn-confirmar"
+                        onclick="confirmarAgendamento()"
+                    >
+                        ✓ Confirmar Agendamento
+                    </button>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+
+    <script src="script-agendamento.js"></script>
+
+</body>
+
+</html>

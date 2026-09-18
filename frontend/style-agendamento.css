@@ -1,0 +1,914 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7f7;
+    min-height: 100vh;
+    color: #333;
+}
+
+
+
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+
+
+
+.menu {
+    width: 220px;
+    min-height: 100vh;
+
+    background-color: white;
+
+    border-right: 1px solid #eeeeee;
+
+    padding: 25px 18px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 0 8px;
+
+    margin-bottom: 35px;
+}
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background-color: #e8f7f6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+}
+
+.logo strong {
+    display: block;
+
+    color: #139c99;
+
+    font-size: 12px;
+}
+
+.logo span {
+    display: block;
+
+    color: #139c99;
+
+    font-size: 10px;
+
+    margin-top: 2px;
+}
+
+
+
+
+.menu nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.menu nav a {
+    width: 100%;
+    height: 36px;
+
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    color: #777;
+
+    font-size: 10px;
+
+    border-radius: 5px;
+
+    transition: 0.2s;
+}
+
+.menu nav a span {
+    white-space: nowrap;
+}
+
+.menu nav a:hover {
+    background-color: #f1fafa;
+
+    color: #139c99;
+}
+
+
+
+.menu nav a.ativo {
+    background-color: #e6f6f5;
+
+    color: #139c99;
+
+    font-weight: bold;
+}
+
+
+
+
+.ajuda {
+    margin-top: auto;
+
+    background-color: #e7f7f6;
+
+    border-radius: 6px;
+
+    padding: 14px 12px;
+
+    text-align: left;
+}
+
+.ajuda strong {
+    display: block;
+
+    color: #333;
+
+    font-size: 11px;
+
+    margin-bottom: 4px;
+}
+
+.ajuda p {
+    color: #777;
+
+    font-size: 9px;
+
+    margin-bottom: 11px;
+}
+
+.ajuda button {
+    width: 100%;
+    height: 30px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background-color: #139c99;
+
+    color: white;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.ajuda button:hover {
+    background-color: #0d8784;
+}
+
+
+
+main {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 30px 42px;
+
+    background-color: #ffffff;
+}
+
+
+
+
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 21px;
+
+    color: #292929;
+
+    font-weight: 600;
+
+    margin-bottom: 6px;
+}
+
+header p {
+    font-size: 9px;
+
+    color: #999;
+}
+
+
+
+.etapas {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    padding: 0 25px;
+}
+
+.etapa {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    min-width: 60px;
+
+    color: #999;
+
+    font-size: 8px;
+}
+
+.etapa .numero {
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    border: 1px solid #dddddd;
+
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 5px;
+
+    color: #999;
+
+    font-size: 9px;
+}
+
+.etapa.ativa {
+    color: #139c99;
+
+    font-weight: bold;
+}
+
+.etapa.ativa .numero {
+    background-color: #139c99;
+
+    border-color: #139c99;
+
+    color: white;
+}
+
+.linha-etapa {
+    flex: 1;
+
+    height: 1px;
+
+    background-color: #e5e5e5;
+
+    margin: 0 5px;
+
+    margin-bottom: 16px;
+}
+
+
+
+
+.area-agendamento {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 12px;
+
+    align-items: stretch;
+}
+
+
+
+
+.card-agendamento {
+    border: 1px solid #eeeeee;
+
+    border-radius: 6px;
+
+    padding: 12px;
+
+    background-color: #ffffff;
+
+    min-width: 0;
+}
+
+.card-agendamento h2 {
+    font-size: 10px;
+
+    color: #444;
+
+    font-weight: 600;
+
+    margin-bottom: 12px;
+}
+
+
+
+
+.lista-pets {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.pet-card {
+    width: 100%;
+
+    min-height: 52px;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 5px;
+
+    padding: 7px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    position: relative;
+}
+
+.pet-card:hover {
+    border-color: #bde6e4;
+
+    background-color: #fbffff;
+}
+
+.pet-card.selecionado {
+    border-color: #139c99;
+
+    background-color: #f4fbfb;
+}
+
+.pet-card input {
+    display: none;
+}
+
+
+
+.foto-pet {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    background-color: #f1f1f1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+
+    flex-shrink: 0;
+}
+
+
+
+.dados-pet {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    min-width: 0;
+}
+
+.dados-pet strong {
+    font-size: 9px;
+
+    color: #444;
+}
+
+.dados-pet span {
+    font-size: 7px;
+
+    color: #999;
+}
+
+
+
+.check-pet {
+    margin-left: auto;
+
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #139c99;
+
+    font-size: 10px;
+}
+
+
+
+
+.adicionar-pet {
+    width: 100%;
+
+    height: 30px;
+
+    border: 1px dashed #d8d8d8;
+
+    border-radius: 5px;
+
+    background-color: white;
+
+    color: #777;
+
+    font-size: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.adicionar-pet:hover {
+    border-color: #139c99;
+
+    color: #139c99;
+
+    background-color: #f9ffff;
+}
+
+
+
+
+.lista-servicos {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.servico-card {
+    width: 100%;
+
+    min-height: 52px;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 5px;
+
+    padding: 7px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.servico-card:hover {
+    border-color: #bde6e4;
+
+    background-color: #fbffff;
+}
+
+.servico-card.selecionado {
+    border-color: #139c99;
+
+    background-color: #f4fbfb;
+}
+
+.servico-card input {
+    display: none;
+}
+
+
+
+.icone-servico {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 5px;
+
+    background-color: #eef8f8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+
+    flex-shrink: 0;
+}
+
+
+
+.dados-servico {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    min-width: 0;
+}
+
+.dados-servico strong {
+    font-size: 8px;
+
+    color: #444;
+}
+
+.dados-servico span {
+    font-size: 7px;
+
+    color: #999;
+}
+
+
+
+.preco {
+    color: #139c99 !important;
+
+    font-size: 8px !important;
+
+    white-space: nowrap;
+}
+
+
+
+.direita {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+
+
+.campo-agendamento {
+    width: 100%;
+}
+
+.campo-agendamento h2 {
+    margin-bottom: 10px;
+}
+
+
+
+
+.campo-agendamento select {
+    width: 100%;
+
+    height: 34px;
+
+    border: 1px solid #e3e3e3;
+
+    border-radius: 4px;
+
+    background-color: white;
+
+    color: #444;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 9px;
+
+    padding: 0 9px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.campo-agendamento select:focus {
+    border-color: #139c99;
+
+    box-shadow: 0 0 0 2px rgba(19, 156, 153, 0.08);
+}
+
+
+
+
+.campo-agendamento label {
+    display: block;
+
+    font-size: 8px;
+
+    color: #777;
+
+    margin-bottom: 5px;
+
+    margin-top: 8px;
+}
+
+.campo-agendamento input[type="date"] {
+    width: 100%;
+
+    height: 34px;
+
+    border: 1px solid #e3e3e3;
+
+    border-radius: 4px;
+
+    background-color: white;
+
+    color: #777;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 9px;
+
+    padding: 0 9px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.campo-agendamento input[type="date"]:focus {
+    border-color: #139c99;
+
+    box-shadow: 0 0 0 2px rgba(19, 156, 153, 0.08);
+}
+
+
+
+
+.horarios {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 6px;
+
+    margin-top: 5px;
+}
+
+.horario {
+    height: 28px;
+
+    border: 1px solid #e2e2e2;
+
+    border-radius: 4px;
+
+    background-color: white;
+
+    color: #777;
+
+    font-size: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.horario:hover {
+    border-color: #139c99;
+
+    color: #139c99;
+}
+
+.horario.selecionado {
+    background-color: #139c99;
+
+    border-color: #139c99;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+
+
+.btn-confirmar {
+    width: 100%;
+
+    height: 36px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #139c99;
+
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    margin-top: auto;
+}
+
+.btn-confirmar:hover {
+    background-color: #0d8784;
+}
+
+
+
+
+@media (max-width: 1000px) {
+
+    .menu {
+        width: 190px;
+
+        padding: 20px 12px;
+    }
+
+    main {
+        padding: 25px;
+    }
+
+    .area-agendamento {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .direita {
+        grid-column: span 2;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .menu {
+        width: 170px;
+    }
+
+    .menu nav a {
+        font-size: 9px;
+
+        gap: 8px;
+    }
+
+    main {
+        padding: 22px;
+    }
+
+    .area-agendamento {
+        grid-template-columns: 1fr;
+    }
+
+    .direita {
+        grid-column: span 1;
+    }
+
+    .etapas {
+        padding: 0;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .container {
+        display: block;
+    }
+
+    .menu {
+        width: 100%;
+
+        min-height: auto;
+
+        border-right: none;
+
+        border-bottom: 1px solid #eeeeee;
+
+        padding: 15px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .menu nav {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 4px;
+    }
+
+    .menu nav a {
+        height: 32px;
+    }
+
+    .ajuda {
+        display: none;
+    }
+
+    main {
+        width: 100%;
+
+        padding: 20px 18px;
+    }
+
+    header h1 {
+        font-size: 19px;
+    }
+
+    .etapas {
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        padding-bottom: 5px;
+    }
+
+    .etapa {
+        min-width: 65px;
+    }
+
+    .linha-etapa {
+        min-width: 25px;
+    }
+
+    .area-agendamento {
+        grid-template-columns: 1fr;
+    }
+
+    .direita {
+        grid-column: span 1;
+    }
+}
+
+
+@media (max-width: 380px) {
+
+    main {
+        padding: 18px 14px;
+    }
+
+    .menu nav {
+        grid-template-columns: 1fr;
+    }
+
+    .horarios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

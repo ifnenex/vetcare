@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clínica Veterinária - Login</title>
+
+    <link rel="stylesheet" href="style_geral.css">
+</head>
+
+<body>
+
+    <main>
+
+        <section class="lado-esquerdo">
+
+            <div class="logo">
+                🐾
+            </div>
+
+            <h1>Clínica Veterinária</h1>
+
+            <p>Cuidando de quem você ama</p>
+
+            <div class="animais">
+
+                <img
+                    src="cachorro.png"
+                    alt="Cachorro da clínica"
+                >
+
+                <img
+                    src="gato.png"
+                    alt="Gato da clínica"
+                >
+
+            </div>
+
+        </section>
+
+
+        <section class="lado-direito">
+
+
+            <div id="telaLogin">
+
+                <h2>Bem-vindo de volta!</h2>
+
+                <p class="subtitulo">
+                    Faça login para continuar
+                </p>
+
+
+                <form
+                    id="formLogin"
+                    onsubmit="event.preventDefault(); entrar();"
+                >
+
+                    <div class="campo">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <div class="input-container">
+
+                            <span class="icone">
+                                ✉
+                            </span>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Digite seu e-mail"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+                        <div class="input-container senha-container">
+
+                            <span class="icone">
+                                🔒
+                            </span>
+
+                            <input
+                                type="password"
+                                id="senha"
+                                name="senha"
+                                placeholder="Digite sua senha"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                onclick="mostrarSenha()"
+                                aria-label="Mostrar senha"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="#"
+                        class="esqueci"
+                        onclick="alert('Função de recuperação de senha.'); return false;"
+                    >
+                        Esqueceu sua senha?
+                    </a>
+
+
+                    <button
+                        type="submit"
+                        class="btn-entrar"
+                    >
+                        Entrar
+                    </button>
+
+                </form>
+
+
+                <div class="divisor">
+
+                    <span></span>
+
+                    <p>ou</p>
+
+                    <span></span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn-google"
+                    onclick="loginGoogle()"
+                >
+
+                    <span class="google">
+                        G
+                    </span>
+
+                    Entrar com Google
+
+                </button>
+
+
+                <p class="cadastro">
+
+                    Ainda não tem uma conta?
+
+                    <a
+                        href="#"
+                        onclick="mostrarCadastro(); return false;"
+                    >
+                        Crie sua conta
+                    </a>
+
+                </p>
+
+            </div>
+
+
+            
+
+            <div id="telaCadastro" style="display: none;">
+
+                <h2>Crie sua conta!</h2>
+
+                <p class="subtitulo">
+                    Cadastre-se para cuidar melhor do seu pet
+                </p>
+
+
+                <form
+                    id="formCadastro"
+                    onsubmit="event.preventDefault(); cadastrar();"
+                >
+
+                    <div class="campo">
+
+                        <label for="nomeCadastro">
+                            Nome
+                        </label>
+
+                        <div class="input-container">
+
+                            <span class="icone">
+                                👤
+                            </span>
+
+                            <input
+                                type="text"
+                                id="nomeCadastro"
+                                name="nome"
+                                placeholder="Digite seu nome"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="emailCadastro">
+                            E-mail
+                        </label>
+
+                        <div class="input-container">
+
+                            <span class="icone">
+                                ✉
+                            </span>
+
+                            <input
+                                type="email"
+                                id="emailCadastro"
+                                name="email"
+                                placeholder="Digite seu e-mail"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="senhaCadastro">
+                            Senha
+                        </label>
+
+                        <div class="input-container senha-container">
+
+                            <span class="icone">
+                                🔒
+                            </span>
+
+                            <input
+                                type="password"
+                                id="senhaCadastro"
+                                name="senha"
+                                placeholder="Crie uma senha"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                onclick="mostrarSenhaCadastro()"
+                                aria-label="Mostrar senha"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="confirmarSenha">
+                            Confirmar senha
+                        </label>
+
+                        <div class="input-container senha-container">
+
+                            <span class="icone">
+                                🔒
+                            </span>
+
+                            <input
+                                type="password"
+                                id="confirmarSenha"
+                                name="confirmarSenha"
+                                placeholder="Confirme sua senha"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn-entrar"
+                    >
+                        Criar conta
+                    </button>
+
+                </form>
+
+
+                <p class="cadastro">
+
+                    Já possui uma conta?
+
+                    <a
+                        href="#"
+                        onclick="mostrarLogin(); return false;"
+                    >
+                        Fazer login
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script_geral.js"></script>
+
+</body>
+
+</html>
